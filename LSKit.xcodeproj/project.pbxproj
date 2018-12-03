@@ -13,6 +13,7 @@
 		6DA401AF21B4D6D700AC2E99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DA401AE21B4D6D700AC2E99 /* Assets.xcassets */; };
 		6DA401B221B4D6D700AC2E99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DA401B021B4D6D700AC2E99 /* LaunchScreen.storyboard */; };
 		6DA401B521B4D6D700AC2E99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA401B421B4D6D700AC2E99 /* main.m */; };
+		A53F96FFDC8EC14990D01B64 /* libPods-LSKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAD5FF41F92175DA3D426C2 /* libPods-LSKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		6DA401B121B4D6D700AC2E99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6DA401B321B4D6D700AC2E99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DA401B421B4D6D700AC2E99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		97690377A9517E6C2026F3DB /* Pods-LSKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LSKit/Pods-LSKit.debug.xcconfig"; sourceTree = "<group>"; };
+		A7FBD29849B765659EA3EA2A /* Pods-LSKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-LSKit/Pods-LSKit.release.xcconfig"; sourceTree = "<group>"; };
+		FAAD5FF41F92175DA3D426C2 /* libPods-LSKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LSKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A53F96FFDC8EC14990D01B64 /* libPods-LSKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07DF8C693E959D18C14C8E70 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97690377A9517E6C2026F3DB /* Pods-LSKit.debug.xcconfig */,
+				A7FBD29849B765659EA3EA2A /* Pods-LSKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		66AFE01C9A8E2B51E38E132E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAAD5FF41F92175DA3D426C2 /* libPods-LSKit.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6DA4019921B4D6D500AC2E99 = {
 			isa = PBXGroup;
 			children = (
 				6DA401A421B4D6D500AC2E99 /* LSKit */,
 				6DA401A321B4D6D500AC2E99 /* Products */,
+				07DF8C693E959D18C14C8E70 /* Pods */,
+				66AFE01C9A8E2B51E38E132E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6DA401B821B4D6D700AC2E99 /* Build configuration list for PBXNativeTarget "LSKit" */;
 			buildPhases = (
+				6C327C252B8FD37ACD9D858F /* [CP] Check Pods Manifest.lock */,
 				6DA4019E21B4D6D500AC2E99 /* Sources */,
 				6DA4019F21B4D6D500AC2E99 /* Frameworks */,
 				6DA401A021B4D6D500AC2E99 /* Resources */,
+				4734BB4D7A7AE15602C0F8B6 /* [CP] Embed Pods Frameworks */,
+				67CB67ABE0248E95E825183E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,6 +162,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4734BB4D7A7AE15602C0F8B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LSKit/Pods-LSKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67CB67ABE0248E95E825183E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LSKit/Pods-LSKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C327C252B8FD37ACD9D858F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LSKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6DA4019E21B4D6D500AC2E99 /* Sources */ = {
@@ -281,6 +359,7 @@
 		};
 		6DA401B921B4D6D700AC2E99 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97690377A9517E6C2026F3DB /* Pods-LSKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +376,7 @@
 		};
 		6DA401BA21B4D6D700AC2E99 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7FBD29849B765659EA3EA2A /* Pods-LSKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
